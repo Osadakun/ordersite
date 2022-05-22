@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :home
+  resources :home, only: %i[index new create show destroy]
+  root to: "home#index"
 
   devise_for :users, controllers: {
     confirmations: 'users/confirmations',
