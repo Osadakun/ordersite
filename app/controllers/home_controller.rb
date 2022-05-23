@@ -4,7 +4,7 @@ class HomeController < ApplicationController
   end
 
   def new
-
+    @member = Team.find(1)
   end
 
   def create
