@@ -1,4 +1,205 @@
 h1 オーダー提出
+h2 = "#{@member.name}ジュニア"
 
-= form_with model: @member do |m|
-- end
+body
+  table[border="1"]
+    col.colName[span="1"]
+    col.colAge[span="1"]
+    col.col6Ds[span="1" bgcolor="#00FF00"]
+    col.col6S[span="1"]
+    col.col5D[span="1"]
+    col.col5S[span="1"]
+    col.col4S[span="1"]
+    thead
+      tr
+        th[rowspan="2"]
+          | 選手名
+        th[rowspan="2"]
+          | 学年
+        th[colspan="2"]
+          | ６年
+        th[colspan="2"]
+          | ５年
+        th
+          | ４年
+        th[rowspan="2"]
+      tr
+        th
+          | D
+        th
+          | S
+        th
+          | D
+        th
+          | S
+        th
+          | S
+    tbody
+      tr
+        td
+          = @member.member1
+        td
+          | 6
+        td
+          input[type="radio" name="btn1" value="6D" onclick="onClick()" checked]
+        td
+          input[type="radio" name="btn1" value="6S" onclick="onClick()"]
+        td
+          input[type="radio" name="btn1" value="5D" onclick="onClick()"]
+        td
+          input[type="radio" name="btn1" value="5S" onclick="onClick()"]
+        td
+          input[type="radio" name="btn1" value="4S" onclick="onClick()"]
+        td
+          input[type="radio" name="btn1" value="NO" onclick="onClick()"]
+      tr
+        td
+          = @member.member2
+        td
+          | 6
+        td
+          input[type="radio" name="btn2" value="6D" onclick="onClick()" checked]
+        td
+          input[type="radio" name="btn2" value="6S" onclick="onClick()"]
+        td
+          input[type="radio" name="btn2" value="5D" onclick="onClick()"]
+        td
+          input[type="radio" name="btn2" value="5S" onclick="onClick()"]
+        td
+          input[type="radio" name="btn2" value="4S" onclick="onClick()"]
+        td
+          input[type="radio" name="btn2" value="NO" onclick="onClick()"]
+      tr
+        td
+          = @member.member3
+        td
+          | 6
+        td
+          input[type="radio" name="btn3" value="6D" onclick="onClick()"]
+        td
+          input[type="radio" name="btn3" value="6S" onclick="onClick()" checked]
+        td
+          input[type="radio" name="btn3" value="5D" onclick="onClick()"]
+        td
+          input[type="radio" name="btn3" value="5S" onclick="onClick()"]
+        td
+          input[type="radio" name="btn3" value="4S" onclick="onClick()"]
+        td
+          input[type="radio" name="btn3" value="NO" onclick="onClick()"]
+      tr
+        td
+          = @member.member4
+        td
+          | 5
+        td
+          input[type="radio" name="btn4" value="6D" onclick="onClick()"]
+        td
+          input[type="radio" name="btn4" value="6S" onclick="onClick()"]
+        td
+          input[type="radio" name="btn4" value="5D" onclick="onClick()" checked]
+        td
+          input[type="radio" name="btn4" value="5S" onclick="onClick()"]
+        td
+          input[type="radio" name="btn4" value="4S" onclick="onClick()"]
+        td
+          input[type="radio" name="btn4" value="NO" onclick="onClick()"]
+      tr
+        td
+          = @member.member5
+        td
+          | 5
+        td
+          input[type="radio" name="btn5" value="6D" onclick="onClick()"]
+        td
+          input[type="radio" name="btn5" value="6S" onclick="onClick()"]
+        td
+          input[type="radio" name="btn5" value="5D" onclick="onClick()" checked]
+        td
+          input[type="radio" name="btn5" value="5S" onclick="onClick()"]
+        td
+          input[type="radio" name="btn5" value="4S" onclick="onClick()"]
+        td
+          input[type="radio" name="btn5" value="NO" onclick="onClick()"]
+      tr
+        td
+          = @member.member6
+        td
+          | 5
+        td
+          input[type="radio" name="btn6" value="6D" onclick="onClick()"]
+        td
+          input[type="radio" name="btn6" value="6S" onclick="onClick()"]
+        td
+          input[type="radio" name="btn6" value="5D" onclick="onClick()"]
+        td
+          input[type="radio" name="btn6" value="5S" onclick="onClick()" checked]
+        td
+          input[type="radio" name="btn6" value="4S" onclick="onClick()"]
+        td
+          input[type="radio" name="btn6" value="NO" onclick="onClick()"]
+      tr
+        td
+          = @member.member7
+        td
+          | 4
+        td
+          input[type="radio" name="btn7" value="6D" onclick="onClick()"]
+        td
+          input[type="radio" name="btn7" value="6S" onclick="onClick()"]
+        td
+          input[type="radio" name="btn7" value="5D" onclick="onClick()"]
+        td
+          input[type="radio" name="btn7" value="5S" onclick="onClick()"]
+        td
+          input[type="radio" name="btn7" value="4S" onclick="onClick()" checked]
+      tr
+        td
+          = @member.member8
+        td
+          | 4
+        td
+          input[type="radio" name="btn8" value="6D" onclick="onClick()"]
+        td
+          input[type="radio" name="btn8" value="6S" onclick="onClick()"]
+        td
+          input[type="radio" name="btn8" value="5D" onclick="onClick()"]
+        td
+          input[type="radio" name="btn8" value="5S" onclick="onClick()"]
+        td
+          input[type="radio" name="btn8" value="4S" onclick="onClick()"]
+        td
+          input[type="radio" name="btn8" value="NO" onclick="onClick()" checked]
+      tr
+        td
+          = @member.member9
+        td
+          | 4
+        td
+          input[type="radio" name="btn9" value="6D" onclick="onClick()"]
+        td
+          input[type="radio" name="btn9" value="6S" onclick="onClick()"]
+        td
+          input[type="radio" name="btn9" value="5D" onclick="onClick()"]
+        td
+          input[type="radio" name="btn9" value="5S" onclick="onClick()"]
+        td
+          input[type="radio" name="btn9" value="4S" onclick="onClick()"]
+        td
+          input[type="radio" name="btn9" value="NO" onclick="onClick()" checked]
+      tr
+        td
+          = if @member.member10 = nil
+            td
+              | 4
+            td
+              input[type="radio" name="btn10" value="6D" onclick="onClick()"]
+            td
+              input[type="radio" name="btn10" value="6S" onclick="onClick()"]
+            td
+              input[type="radio" name="btn10" value="5D" onclick="onClick()"]
+            td
+              input[type="radio" name="btn10" value="5S" onclick="onClick()"]
+            td
+              input[type="radio" name="btn10" value="4S" onclick="onClick()"]
+  #textErrorMessage.classErrorMessage
+  p
