@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :home, only: %i[index new create show destroy]
   root to: "home#index"
 
+  # controllerをカスタマイズできるようにする記述
   devise_for :users, controllers: {
     confirmations: 'users/confirmations',
     passwords:     'users/passwords',
