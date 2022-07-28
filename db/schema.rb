@@ -10,8 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 0) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_22_072206) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "orders", force: :cascade do |t|
+    t.text "name"
+    t.text "enemy_name"
+    t.text "first_double_1"
+    t.text "first_double_2"
+    t.text "first_single"
+    t.text "second_double_1"
+    t.text "second_double_2"
+    t.integer "team_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.string "name"
+    t.string "member1"
+    t.string "member2"
+    t.string "member3"
+    t.string "member4"
+    t.string "member5"
+    t.string "member6"
+    t.string "member7"
+    t.string "member8"
+    t.string "member9"
+    t.string "member10"
+    t.integer "team_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
