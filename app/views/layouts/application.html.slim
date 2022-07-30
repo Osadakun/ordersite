@@ -8,12 +8,13 @@ html
     = csp_meta_tag
     = stylesheet_link_tag "application", "dataa-turbo-track": "reload"
     = javascript_include_tag "application", "data-turbo-track": "reload", defer: true
+    = javascript_pack_tag 'application'
   body
     .app-title.navbar.navbar-expand-md.navbar-light.bg-light
-      .navbar-brand Taskleaf
+      .navbar-brand
 
       ul.navbar-nav.ml-auto
-        #先ほどヘルパーメソッドに定義したcurrent_userメソッドを利用して、ログインしている時とログアウトしている時で画面の表示を変える
+        #先ほどヘルパーメソッドに定義したcurrent_userメソッドを利用して ログインしている時とログアウトしている時で画面の表示を変える
       - if current_user
         li.nav-item= link_to 'タスク一覧',tasks_path, class:'nav-link'
         li.nav-item= link_to 'ユーザー一覧',admin_users_path, class:'nav-link'
@@ -21,4 +22,3 @@ html
       - else
         li.nav-item= link_to 'ログイン',login_path, class:'nav-link'
     = yield
-    
